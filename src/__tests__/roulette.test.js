@@ -70,6 +70,13 @@ describe('calculateSpinDegrees', () => {
     const deg3 = calculateSpinDegrees(3, 8, 0)
     expect(deg0).not.toBe(deg3)
   })
+
+  test('getResultIndex(calculateSpinDegrees(i, 8, 0), 8) === i for all segments', () => {
+    for (let i = 0; i < 8; i++) {
+      const spin = calculateSpinDegrees(i, 8, 0)
+      expect(getResultIndex(spin, 8)).toBe(i)
+    }
+  })
 })
 
 describe('getResultIndex', () => {

@@ -49,10 +49,9 @@ export function sampleSegments(menus, mode) {
 export function calculateSpinDegrees(targetIndex, segmentCount, currentRotation) {
   const segmentAngle = 360 / segmentCount
   const targetMidAngle = targetIndex * segmentAngle + segmentAngle / 2
-  const toTop = (360 - targetMidAngle) % 360
   const extra = 5 * 360 // 5바퀴
   const currentNorm = currentRotation % 360
-  const needed = (toTop - currentNorm + 360) % 360
+  const needed = (targetMidAngle - currentNorm + 360) % 360
   return currentRotation + extra + needed
 }
 
