@@ -84,8 +84,8 @@ describe('getResultIndex', () => {
     expect(getResultIndex(0, 8)).toBe(0)
   })
 
-  test('총 회전각 45도(1조각)이면 인덱스 1 반환', () => {
-    expect(getResultIndex(45, 8)).toBe(1)
+  test('총 회전각 45도 회전 시 인덱스 7 반환 (45° 돌면 7번 조각이 12시로 옴)', () => {
+    expect(getResultIndex(45, 8)).toBe(7)
   })
 
   test('총 회전각 360도(1바퀴)이면 인덱스 0 반환', () => {

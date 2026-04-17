@@ -49,17 +49,19 @@ export function sampleSegments(menus, mode) {
 export function calculateSpinDegrees(targetIndex, segmentCount, currentRotation) {
   const segmentAngle = 360 / segmentCount
   const targetMidAngle = targetIndex * segmentAngle + segmentAngle / 2
-  const extra = 5 * 360 // 5바퀴
+  const toTop = (360 - targetMidAngle) % 360
+  const extra = 5 * 360
   const currentNorm = currentRotation % 360
-  const needed = (targetMidAngle - currentNorm + 360) % 360
+  const needed = (toTop - currentNorm + 360) % 360
   return currentRotation + extra + needed
 }
 
 /**
  * 총 회전각에서 포인터(상단)에 위치한 세그먼트 인덱스 계산
+ * CSS 시계방향 R도 회전 시, 원래 (360-R)° 위치의 조각이 12시로 온다
  */
 export function getResultIndex(totalRotation, segmentCount) {
   const segmentAngle = 360 / segmentCount
-  const normalizedAngle = totalRotation % 360
+  const normalizedAngle = ((360 - (totalRotation % 360)) % 360)
   return Math.floor(normalizedAngle / segmentAngle) % segmentCount
 }
