@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bash \"C:\\\\Users\\\\Jinwook\\\\.claude\\\\plugins\\\\cache\\\\claude-plugins-official\\\\superpowers\\\\5.0.7\\\\skills\\\\brainstorming\\\\scripts\\\\start-server.sh\" --project-dir \"C:\\\\Users\\\\sy\\\\hynux-web\\\\foodieChoice\")",
+      "Bash(npm create *)",
+      "Bash(npx create-vite@latest --help)",
+      "Bash(npx create-vite@latest . --template react --no-interactive)",
+      "Bash(npx create-vite@latest --version)",
+      "Read(//c/tmp/**)",
+      "Bash(npx create-vite@latest foodieChoice-temp --template react --no-interactive)",
+      "Bash(npm install *)",
+      "Bash(npx tailwindcss *)",
+      "Bash(timeout 10 npm run dev)",
+      "Bash(npm run *)"
+    ]
+  }
+}

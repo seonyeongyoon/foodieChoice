@@ -1,0 +1,71 @@
+<h2>전체 레이아웃 미리보기</h2>
+<p class="subtitle">대략적인 화면 구성입니다 — 전체적인 흐름이 맞는지 확인해 주세요</p>
+
+<div class="mockup" style="max-width: 420px; margin: 0 auto;">
+  <div class="mockup-header">FoodieChoice — 모바일 기준</div>
+  <div class="mockup-body" style="background: #fff; font-family: sans-serif; padding: 0;">
+
+    <!-- 헤더 -->
+    <div style="background: #222; color: #fff; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center;">
+      <span style="font-weight: 700; font-size: 16px; letter-spacing: -0.3px;">🍽 FoodieChoice</span>
+      <button style="background: none; border: 1px solid rgba(255,255,255,0.4); color: #fff; font-size: 11px; padding: 4px 10px; border-radius: 4px; cursor: pointer;">메뉴 편집</button>
+    </div>
+
+    <!-- 점심/저녁 토글 -->
+    <div style="display: flex; padding: 16px 20px 8px; gap: 8px;">
+      <button style="flex:1; padding: 10px; background: #222; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer;">☀️ 점심</button>
+      <button style="flex:1; padding: 10px; background: #f0f0f0; color: #555; border: none; border-radius: 8px; font-size: 14px; font-weight: 500; cursor: pointer;">🌙 저녁</button>
+    </div>
+
+    <!-- 룰렛 영역 -->
+    <div style="padding: 20px; text-align: center;">
+      <div style="position: relative; width: 220px; height: 220px; margin: 0 auto;">
+        <!-- 룰렛 원 (단순화) -->
+        <svg viewBox="0 0 220 220" style="width: 220px; height: 220px;">
+          <!-- 8개 조각 -->
+          <circle cx="110" cy="110" r="105" fill="none" stroke="#ddd" stroke-width="2"/>
+          <path d="M110,110 L110,5 A105,105 0 0,1 215,110 Z" fill="#f8f8f8" stroke="#ddd" stroke-width="1.5"/>
+          <path d="M110,110 L215,110 A105,105 0 0,1 110,215 Z" fill="#efefef" stroke="#ddd" stroke-width="1.5"/>
+          <path d="M110,110 L110,215 A105,105 0 0,1 5,110 Z" fill="#f8f8f8" stroke="#ddd" stroke-width="1.5"/>
+          <path d="M110,110 L5,110 A105,105 0 0,1 110,5 Z" fill="#efefef" stroke="#ddd" stroke-width="1.5"/>
+          <path d="M110,110 L184,36 A105,105 0 0,1 184,184 Z" fill="#f0f0f0" stroke="#ddd" stroke-width="1.5"/>
+          <path d="M110,110 L184,184 A105,105 0 0,1 36,184 Z" fill="#e8e8e8" stroke="#ddd" stroke-width="1.5"/>
+          <path d="M110,110 L36,184 A105,105 0 0,1 36,36 Z" fill="#f0f0f0" stroke="#ddd" stroke-width="1.5"/>
+          <path d="M110,110 L36,36 A105,105 0 0,1 184,36 Z" fill="#e8e8e8" stroke="#ddd" stroke-width="1.5"/>
+          <!-- 메뉴 텍스트 (예시) -->
+          <text x="148" y="72" text-anchor="middle" font-size="9" fill="#333" transform="rotate(22.5, 148, 72)">김치찌개</text>
+          <text x="178" y="148" text-anchor="middle" font-size="9" fill="#333" transform="rotate(67.5, 178, 148)">짬뽕</text>
+          <text x="110" y="192" text-anchor="middle" font-size="9" fill="#333">초밥</text>
+          <text x="48" y="148" text-anchor="middle" font-size="9" fill="#333" transform="rotate(-67.5, 48, 148)">파스타</text>
+          <text x="72" y="72" text-anchor="middle" font-size="9" fill="#333" transform="rotate(-22.5, 72, 72)">비빔밥</text>
+          <text x="148" y="160" text-anchor="middle" font-size="9" fill="#333" transform="rotate(45, 148, 160)">라멘</text>
+          <text x="60" y="160" text-anchor="middle" font-size="9" fill="#333" transform="rotate(-45, 60, 160)">스테이크</text>
+          <text x="110" y="28" text-anchor="middle" font-size="9" fill="#333">냉면</text>
+          <!-- 중심 원 -->
+          <circle cx="110" cy="110" r="22" fill="white" stroke="#222" stroke-width="2"/>
+          <text x="110" y="114" text-anchor="middle" font-size="10" fill="#222" font-weight="bold">GO</text>
+        </svg>
+        <!-- 포인터 -->
+        <div style="position: absolute; top: -8px; left: 50%; transform: translateX(-50%); font-size: 20px; line-height: 1;">▼</div>
+      </div>
+
+      <!-- 스핀 버튼 -->
+      <button style="margin-top: 20px; width: 100%; padding: 14px; background: #222; color: white; border: none; border-radius: 10px; font-size: 15px; font-weight: 600; cursor: pointer; letter-spacing: 0.5px;">🎡 룰렛 돌리기</button>
+    </div>
+
+    <!-- 결과 영역 -->
+    <div style="margin: 0 20px 20px; background: #f8f8f8; border-radius: 10px; padding: 16px; text-align: center; border: 1px solid #eee;">
+      <div style="font-size: 11px; color: #999; margin-bottom: 4px; letter-spacing: 0.5px;">오늘의 추천</div>
+      <div style="font-size: 22px; font-weight: 700; color: #222;">🍜 짬뽕</div>
+      <div style="font-size: 12px; color: #888; margin-top: 4px;">중식</div>
+    </div>
+
+  </div>
+</div>
+
+<div style="margin-top: 24px; background: #F8F9FA; border-radius: 8px; padding: 16px; border: 1px solid #E9ECEF;">
+  <h3 style="margin: 0 0 8px;">메뉴 편집 패널 (슬라이드 인)</h3>
+  <p style="margin: 0; color: #666; font-size: 14px;">우측 상단 "메뉴 편집" 버튼 클릭 시 사이드 패널이 열리며, 한식/중식/일식/양식 탭으로 카테고리별 메뉴를 추가·삭제할 수 있습니다.</p>
+</div>
+
+<p style="text-align:center; color: #888; font-size: 13px; margin-top: 16px;">전체적인 구성이 마음에 드시면 "좋아" 또는 "다음"을 입력해 주세요</p>
